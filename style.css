@@ -1,12 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
-
 * {
   box-sizing: border-box;
 }
 
 body {
   background-color: #00aaff;
-  background: linear-gradient(to right, #e28bf7, #e85aa6);
+  background: linear-gradient(to right, #00aaff, #2980b9);
   color: #fff;
   /* text-align: center; */
   display: flex;
