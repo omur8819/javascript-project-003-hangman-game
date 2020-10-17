@@ -3,17 +3,14 @@
 }
 
 body {
-  background-color: #00aaff;
   background: linear-gradient(to right, #00aaff, #2980b9);
-  color: #fff;
-  /* text-align: center; */
+  color: wheat;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 80vh;
-  margin: 0;
+  height: 100px;
   overflow: hidden;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
   margin: 20px 0 0;
