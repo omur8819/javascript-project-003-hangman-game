@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #00aaff;
+  background: linear-gradient(to right, #e28bf7, #e85aa6);
+  color: #fff;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  margin: 20px 0 0;
+}
+.game-container {
+  padding: 20px 30px;
+  position: relative;
+  margin: auto;
+  height: 350px;
+  width: 450px;
+}
+.figure-container {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+.figure-part {
+  display: none;
+}
+.wrong-letters-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.wrong-letters-container p {
+  margin: 0 0 5px;
+}
+.wrong-letters-container span {
+  font-size: 24px;
+}
+.word {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: rotateX(-50%);
+  /* font-size: 24px; */
+}
+.letter {
+  border-bottom: 3px solid #2980b9;
+  display: inline-flex;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  height: 50px;
+  width: 20px;
+}
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* display: flex; */
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.popup {
+  background: rebeccapurple;
+  border-radius: 5px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+.popup button {
+  cursor: pointer;
+  background-color: #fff;
+  color: #2980b9;
+  border: 0;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.popup button:active {
+  transform: scale(0.98);
+}
+.popup button:focus {
+  outline: 0;
+}
+.notification-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 0 0;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: 486px;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+  visibility: hidden;
+}
+.notification-container p {
+  margin: 0;
+}
+.notification-container .show {
+  visibility: visible;
+  transform: translateY(-50px);
+}
+.meaning-container {
+  text-align: center;
+  margin-bottom: 200px;
+  max-width: 600px;
+}
+button {
+  background-color: rebeccapurple;
+  color: white;
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  border: none;
+  transition: transform 0.1s linear;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  box-shadow: 0;
+  transform: translate(2px, 2px);
+}
+
+.heart {
+  position: fixed;
+  top: -1vh;
+  font-size: 2rem;
+  transform: translateY(0);
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}

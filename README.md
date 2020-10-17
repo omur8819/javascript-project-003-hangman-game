@@ -1,1 +1,2 @@
-# javascript-project-003-hangman-game
+# js_hangman_game
+## [Hangman-game]( https://faziletkosure.github.io/js_hangman_game/)
