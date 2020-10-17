@@ -9,7 +9,23 @@ const mainingMessage=document.getElementById("meaning");
 const figureParts=document.querySelectorAll('.figure-part');
 // console.log("figureParts: " figureParts);
 
- 
+ const meaning={
+     javascript:"is a programming language that conforms to the ECMAScript specification",
+     reactnative:"is an open-source mobile application framework created by Facebook",
+     developer:"a person or company that creates new products, especially software, or services",
+     frontend:" of a website is the part that users interact with.",
+     backend:"of a website consists of a server, an application, and a database.",
+     clarusway:"is a brand new coding school designed for beginners to become world class software developers."
+
+ }
+ const words=Object.keys(meaning);
+
+// console.log(Object.keys(meaning));
+ let selectedWord=words[Math.floor(Math.random()*words.length)];
+ console.log(selectedWord);
+//  meaningMessage
+   
+
  const correctLetters=[];
  const wrongLetters=[];
 //Show hidden word
