@@ -1,0 +1,87 @@
+body {
+	background-color: #000000;
+	font-family: 'Poppins', sans-serif;
+	color: #ffffff;
+}
+
+#title {
+	margin-top: 45px;
+}
+
+#gameInstructions {
+	font-size: 170%;
+	margin-top: 25px;
+}
+
+#gameContainer {
+	margin-top: 10px;
+	padding: 30px;
+}
+
+#leftColumn {
+	border: 1px solid #ff3600;
+	padding: 30px;
+}
+
+#rightColumn {
+	border: 1px solid #ff3600; 
+	padding: 30px;
+	height: 634px;
+}
+
+#currentWord {
+	text-align: center;
+}
+
+#theWord {
+	font-size: 160%;
+	background-color: #252525; 
+	line-height: 2.5;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+#winLose {
+	margin: auto;
+	border: 1px dashed #ff3600;
+	margin-top: 30px;
+}
+
+#wins, #losses{
+	height: 40px;
+	font-size: 160%;
+	line-height: 40px;
+}
+
+#remGuesses {
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+#guessedLetters {
+	background-color: #ff3600;
+	color: #ffffff;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 20px;
+}
+
+.imgDivs {
+	margin-bottom: 30px;
+}
+
+.names {
+	font-size: 70%;
+	font-weight: 700;
+	letter-spacing: 1px;
+	margin-top: 5px;
+	text-align: center;
+}
+
+#upsideDown {
+	transform: rotate(180deg);
+}
+
+#song {
+	margin-top: 30px;
+}

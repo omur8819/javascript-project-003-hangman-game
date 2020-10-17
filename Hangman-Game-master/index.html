@@ -1,0 +1,162 @@
+<!-- Homework Assingment: JavaScript Assignment Option Two: Hangman Game (Challenge - Recommended) -->
+
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Stranger Hangman</title>
+
+	<!-- Linking Normalize.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+
+	<!-- Setting the Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- BOOTSTRAP 3: Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Linking my own CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- Linking Google Web Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+
+</head>
+<body>
+<div class="container"> <!-- container -->
+
+	<div class="row"> <!-- row -->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> <!-- column -->
+
+			<!-- TITLE -->
+			<img src="assets/images/strangerHangmanTitle.png" alt="Stranger Hangman" class="center-block img-responsive" id="title">
+
+		</div>
+	</div>
+
+	<div class="row"> <!-- row -->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> <!-- column -->
+
+			<!-- Instructions of the game -->
+			<div class="text-center" id="gameInstructions">
+				<p>Press any key to get started!</p>
+			</div>
+
+			<div class="text-center">
+				<p>Try to guess the current word. Do it before the all your friends are sent to the Upside Down!</p>
+			</div>
+
+		</div> <!-- column -->
+	</div> <!-- row -->
+
+
+	<div class="row" id="gameContainer"> <!-- row 1 -->
+
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="leftColumn"> <!-- column left-->
+			<div class="row">
+				<div class="col-xs-3 col-sm-3 col-md-6 col-lg-6 imgDivs" id="elevenImg">
+					<img src="assets/images/eleven.png" alt="Eleven" class="center-block img-responsive" ><p class="text-center names">ELEVEN</p>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-6 col-lg-6 imgDivs" id="mikeImg">
+					<img src="assets/images/mike.png" alt="Mike" class="center-block img-responsive"><p class="text-center names">MIKE</p>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-6 col-lg-6 imgDivs" id="willImg">
+					<img src="assets/images/will.png" alt="Will" class="center-block img-responsive"><p class="text-center names">WILL</p>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-6 col-lg-6 imgDivs" id="dustinImg">
+					<img src="assets/images/dusty.png" alt="Dusty" class="center-block img-responsive"><p class="text-center names">DUSTIN</p>
+				</div>
+			</div>	
+
+			<div class="row">
+				<div class="col-xs-3 col-sm-3 col-md-6">
+					<img src="assets/images/lucas.png" alt="Lucas" class="center-block img-responsive" id="lucasImg"><p class="text-center names">LUCAS</p>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-6">
+					<img src="assets/images/madMax.png" alt="Mad Max" class="center-block img-responsive" id="madMaxImg"><p class="text-center names">MAD MAX</p>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-6">
+					<img src="assets/images/steve.png" alt="Steve" class="center-block img-responsive" id="steveImg"><p class="text-center names">STEVE</p>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-6">
+					<img src="assets/images/chiefHopper.png" alt="Chief Hopper" class="center-block img-responsive" id="chiefHopperImg"><p class="text-center names">CHIEF HOPPER</p>
+				</div>
+			</div>			
+		</div> <!-- column left-->
+
+
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="rightColumn"> <!-- column right-->
+
+
+			<div class="row"> <!-- row -->
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="currentWord"> <!-- column -->
+
+					<!-- CURRENT WORD TO BE GUESSED -->
+						<div >
+							<h3>CURRENT WORD</h3>
+						</div>
+						<div >
+							<h2 id="theWord">   </h2>
+						</div>
+
+				</div> <!-- column -->
+			</div> <!-- row -->
+
+
+			<div class="row"> <!-- row -->
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> <!-- column -->
+
+					<!-- Game Stats -->
+						<div class="row" id="winLose"> <!-- row -->
+
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"> <!-- column -->
+								<div >
+									<h4 id="wins">Wins:  </h4>
+								</div>
+							</div> <!-- column -->
+
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"> <!-- column -->
+								<div >
+									<h4 id="losses">Losses:  </h4>
+								</div>
+							</div> <!-- column -->							
+						</div> <!-- row -->
+
+
+						<div>
+							<h4 class="text-center" id="remGuesses">Number of Guesses Remaining:  </h4>
+						</div>
+
+						<div>
+							<h4 id="guessedLetters">Letters Already Guessed:  </h4>
+						</div>
+				</div> <!-- column -->
+			</div> <!-- row -->
+	
+
+		</div> <!-- column right-->
+			
+	<div class="row">
+		<div class="col-xs-12">
+			
+			<div class="text-center">
+				<audio controls autoplay id="song">
+ 					<source src="assets/sounds/strangerThings.mp3" type="audio/mpeg">
+ 				</audio>
+			</div>
+
+		</div>
+	</div>
+			
+
+</div> <!-- container -->
+
+<!-- Linking my own JAVASCRIPT -->
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+</html>
